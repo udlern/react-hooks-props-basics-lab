@@ -6,6 +6,7 @@ import Home from "../components/Home";
 test("uses the 'username' and 'city' props to display the correct text", () => {
   render(<Home username="Liza" city="New York" color="firebrick" />);
   const liza = screen.queryByText(`Liza is a Web Developer from New York`);
+  console.log(liza)
   expect(liza).toBeInTheDocument();
 
   render(<Home username="Duane" city="Queens" color="firebrick" />);
